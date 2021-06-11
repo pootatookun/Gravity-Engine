@@ -1,0 +1,133 @@
+#:import Factory kivy.factory.Factory
+<Mass>:
+    mass: mass
+
+    auto_dismiss: False
+    size_hint: 0.3, 0.2
+    pos_hint: {"x":0.2, "top":0.9}    
+    title: 'Enter Mass(Kg)'
+
+    TextInput:
+        id : mass
+        input_filter: 'int'
+        multiline: False
+        font_size: 25
+        on_text_validate: root.mass_()
+
+
+<Engine_controls_n_info>: 
+    orientation: 'vertical'
+
+    BoxLayout:
+        id: exit
+        orientation: 'vertical'
+        size_hint: 1, 0.05
+        on_touch_down: root.exit(args[1])
+        
+        canvas:
+            Color:
+                rgb: 1,1,1
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        Label:
+            markup: True
+            text: '[color=ff3333][b]DOUBLE TAP TO EXIT[/b][/color]'
+            font_size: self.width/11
+    
+    GridLayout:
+        cols: 2
+        size_hint: 1,0.05
+        Label:
+            markup: True
+            text: '[b]Time Elapsed:[/b]'
+            font_size: self.width/6
+        Label:
+            id: time_elapsed
+            markup: True
+            text: '[b]0[/b]'
+            font_size: self.width/6
+        
+    ScrollView:
+        size_hint: 1,0.6
+
+        GridLayout:
+            id: scroll_view
+            cols: 2
+            size_hint_y: None
+            height: self.minimum_height
+            
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint: 1, 0.3
+        GridLayout:
+            id: for_info
+            rows: 3
+            size_hint: 1, 0.4
+
+            Button:
+                id: random_mass
+                size_hint: 1, 0.5
+                text: 'Random Mass'
+                font_size: self.width/7
+                background_color: 1,0,0
+                on_press: root.random_mass()
+
+        
+            GridLayout:
+                cols: 2
+                rows: 2
+                size_hint: 1,0.5
+
+                Label:
+                    text:'Set Multiplier:'
+                    text_size: self.size
+                    font_size: self.width/8
+                    
+                    
+                TextInput:         
+
+                Label:
+                    text:'Farthest--Particles(m):'
+                    text_size: self.size
+                    font_size: self.width/10
+                TextInput:   
+                    id: farthest_distance  
+                    input_filter: 'int'
+                    multiline: False
+                    on_text_validate: root.distance_farthest()
+
+            BoxLayout:
+                id: buttons
+                orientation: 'vertical'
+                Button:
+                    id: reload_button
+                    text: 'Reload'
+                    font_size: self.width/7
+                    background_color: 0,0,1
+                    on_press: root.parent.reload()
+
+                Button:
+                    id: begin_fun
+                    text: 'BEGIN FUN'
+                    font_size: self.width/7
+                    background_color: 0,1,0
+                    on_press: root.button_state()
+    
+
+<Particle_engine>:   
+    
+
+<Gravity_Engine_layout>:
+    
+    Particle_Renderer:
+        id: particle_renderer
+        pos: root.pos
+        size: root.width - root.width * 1/5, root.height
+
+    Engine_controls_n_info:
+        id: info_renderer
+        pos: root.width * 4/5, 0 
+        size: root.width - root.width * 4/5 , root.height 
+    
+     
