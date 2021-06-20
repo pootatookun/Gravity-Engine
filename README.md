@@ -3,7 +3,7 @@
 This piece of code simulates Universal Law of Gravitation, between N particles. 
 Made using python and Kivy.
 
-Above in file "Video showcase for Gravity Simulation v1.0" you will find youtube link
+Above in file "Video showcase for Gravity Simulation v1.0" you will find youtube link <https://www.youtube.com/watch?v=Hn6hJmoTvyQ>
 of running gravity engine. :DDD
 
 Key Features:  
