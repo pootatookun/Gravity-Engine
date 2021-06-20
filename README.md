@@ -34,7 +34,7 @@ How to use:
 5. Click on 'Begin Fun' to start simulation.
 
 	SET MULTIPLIER  does nothing in this version
--------Be sure to check your task manager is eating your cpu ;)
+-------Be sure to check in your task manager, what is eating your cpu ;)
  
 
 
