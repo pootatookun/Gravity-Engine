@@ -1,1 +1,0 @@
-Put this whole directory inside of "Gravity Engine" before executing run command.
