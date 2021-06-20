@@ -1,7 +1,10 @@
 # Gravity-Engine
 
 This piece of code simulates Universal Law of Gravitation, between N particles. 
-Made using python and Kivy
+Made using python and Kivy.
+
+Above in file "Video showcase for Gravity Simulation v1.0" you will find youtube link
+of running gravity engine. :DDD
 
 Key Features:  
 1. Can add N particles
