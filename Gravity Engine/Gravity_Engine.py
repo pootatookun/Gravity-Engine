@@ -100,12 +100,6 @@ if __name__ == '__main__':
                     Storage1.clock_then_microprocessing_object[1].close()
                 App.get_running_app().stop()
 
-    """ 
-    Particles are rendered here. 
-    Input for the particles. any relevant calculations
-    dimensions start pos: root window's i.e. 0,0
-    size: 4/5 of root windows , root window's height
-    """
 
 
     class Particle_Renderer(BoxLayout):
@@ -198,8 +192,6 @@ if __name__ == '__main__':
             return Gravity_engine_layout()
 
 
-
-        """Main run Loop"""
     radius = 35
     mp_storage = M_storage()
     Gravity_engineApp().run()

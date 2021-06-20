@@ -15,5 +15,3 @@ from kivy.uix.textinput import TextInput
 from kivy.app import stopTouchApp
 from kivy.core.window import Window
 from kivy.uix.scrollview import ScrollView
-    
-

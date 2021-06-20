@@ -3,10 +3,12 @@
 This piece of code simulates Universal Law of Gravitation, between N particles. 
 Made using python and Kivy
 
-* Features:   Can add N particles
-		  * You can set distance between masses.
-		  * Shows real time acceleration
-		  * And has a nice scroolview, which shows particles and their accelerations :)
+Key Features:  
+1. Can add N particles
+2. You can set distance between masses.
+3. Shows real time acceleration
+4. And has a nice scroolview, which shows particles and their accelerations :)
+5. A reload button
 
 
 Microsoft Defender or any other anivirus/malware, might tag Executable as virus.
